@@ -72,8 +72,20 @@ function initNav() {
   const links = document.querySelector('.nav__links');
   if (ham && links) {
     ham.addEventListener('click', () => {
-      ham.classList.toggle('is-open');
+      const isOpen = ham.classList.toggle('is-open');
       links.classList.toggle('is-open');
+      ham.setAttribute('aria-expanded', isOpen);
+      ham.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+    });
+    // Cerrar con Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && ham.classList.contains('is-open')) {
+        ham.classList.remove('is-open');
+        links.classList.remove('is-open');
+        ham.setAttribute('aria-expanded', 'false');
+        ham.setAttribute('aria-label', 'Abrir menú');
+        ham.focus();
+      }
     });
   }
   // Mark active link
