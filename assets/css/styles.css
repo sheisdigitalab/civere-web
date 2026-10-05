@@ -451,7 +451,7 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
 }
 .footer__socials a:hover { border-color: var(--sage); background: rgba(74,107,93,.2); }
 .footer__socials svg { width: 15px; height: 15px; stroke: rgba(255,255,255,.7); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.footer__col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 18px; }
+.footer__col h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 18px; }
 .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .footer__col ul li a { font-size: 0.85rem; color: rgba(255,255,255,.6); transition: color .2s; }
 .footer__col ul li a:hover { color: #fff; }
