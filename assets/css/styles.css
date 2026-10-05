@@ -318,7 +318,7 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
 .catalog-hero__tag {
   font-size: 0.72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
   color: var(--sage); border: 1px solid var(--sage);
-  padding: 6px 14px; border-radius: 100px;
+  padding: 8px 16px; border-radius: 100px;
 }
 
 /* ============================================================
