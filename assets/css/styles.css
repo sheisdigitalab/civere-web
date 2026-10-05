@@ -219,7 +219,7 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
   position: absolute; top: 12px; left: 12px;
   background: var(--sage); color: #fff;
   font-size: 0.7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  padding: 4px 10px; border-radius: 2px;
+  padding: 6px 12px; border-radius: 2px;
 }
 .product-card__badge--new { background: var(--charcoal); }
 .product-card__actions {
