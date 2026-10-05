@@ -208,34 +208,35 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
 .product-card:hover { transform: translateY(-4px); }
 .product-card__img-wrap {
   position: relative; overflow: hidden;
-  border-radius: var(--r); background: var(--ivory-2);
+  border-radius: 12px; background: var(--ivory-2);
   aspect-ratio: 3/4;
 }
 .product-card__img-wrap img {
   width: 100%; height: 100%; object-fit: cover;
-  transition: transform .6s var(--ease);
+  transition: transform .65s var(--ease);
 }
-.product-card:hover .product-card__img-wrap img { transform: scale(1.06); }
+.product-card:hover .product-card__img-wrap img { transform: scale(1.05); }
 .product-card__badge {
   position: absolute; top: 12px; left: 12px;
   background: var(--sage); color: #fff;
-  font-size: 0.7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  padding: 8px 12px; border-radius: 2px;
+  font-size: 0.74rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 100px;
 }
 .product-card__badge--new { background: var(--charcoal); }
 .product-card__actions {
-  position: absolute; bottom: 12px; left: 12px; right: 12px;
-  opacity: 0; transform: translateY(8px);
-  transition: opacity .3s var(--ease), transform .3s var(--ease);
+  position: absolute; bottom: 14px; left: 12px; right: 12px;
+  opacity: 0; transform: translateY(6px);
+  transition: opacity .28s var(--ease), transform .28s var(--ease);
 }
 .product-card:hover .product-card__actions { opacity: 1; transform: translateY(0); }
-.product-card__body { padding: 18px 0 6px; }
-.product-card__cat { font-size: 0.71rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: .12em; margin-bottom: 6px; font-weight: 600; }
-.product-card__name { font-family: var(--serif); font-size: 1.1rem; font-weight: 500; margin-bottom: 10px; line-height: 1.25; }
+.product-card__body { padding: 18px 0 8px; }
+.product-card__cat { font-size: 0.74rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: .12em; margin-bottom: 5px; font-weight: 600; }
+.product-card__name { font-family: var(--serif); font-size: 1.08rem; font-weight: 500; margin-bottom: 12px; line-height: 1.28; }
+.product-card__name a { color: inherit; text-decoration: none; transition: color .2s var(--ease); }
 .product-card__name a:hover { color: var(--sage); }
-.product-card__price-row { display: flex; align-items: center; gap: 10px; }
-.product-card__price { font-size: 1.12rem; font-weight: 700; color: var(--charcoal); }
-.product-card__price-old { font-size: 0.88rem; color: var(--ink-2); text-decoration: line-through; }
+.product-card__price-row { display: flex; align-items: baseline; gap: 9px; }
+.product-card__price { font-size: 1.05rem; font-weight: 700; color: var(--charcoal); font-variant-numeric: tabular-nums; }
+.product-card__price-old { font-size: 0.85rem; color: var(--ink-2); text-decoration: line-through; font-variant-numeric: tabular-nums; }
 
 /* ============================================================
    PILLARS SECTION
@@ -400,9 +401,9 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
 .product-card:hover .product-card__wish { opacity: 1; }
 .product-card__wish svg { width: 15px; height: 15px; stroke: var(--charcoal); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: stroke .2s, fill .2s; }
 .product-card__wish:hover svg { stroke: #d63; fill: #d63; }
-.product-card__rating { display: flex; align-items: center; gap: 5px; margin-bottom: 5px; }
-.product-card__rating .stars { color: var(--sage); font-size: 0.7rem; letter-spacing: 1px; }
-.product-card__rating .score { font-size: 0.72rem; color: var(--ink-2); }
+.product-card__rating { display: flex; align-items: center; gap: 5px; margin-bottom: 8px; }
+.product-card__rating .stars { color: var(--sage); font-size: 0.74rem; letter-spacing: 1.5px; }
+.product-card__rating .score { font-size: 0.74rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 
 /* ============================================================
    PRODUCT PAGE
