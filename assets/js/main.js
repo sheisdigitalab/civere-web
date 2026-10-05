@@ -260,7 +260,7 @@ function initSocialProof() {
     { name: 'Lucía R.', city: 'Valencia', product: 'Crema Aloe Shield', time: 'hace 3 h', img: 'https://images.unsplash.com/photo-1699885725100-18bfef4955d6?w=120&q=70' },
     { name: 'Marta G.', city: 'Sevilla', product: 'Aceite Argan Ritual', time: 'hace 5 h', img: 'https://images.unsplash.com/photo-1672062519474-1a4407fdf387?w=120&q=70' },
     { name: 'Sara T.', city: 'Bilbao', product: 'Sérum Rosehip Glow', time: 'hace 6 h', img: 'https://images.unsplash.com/photo-1613803745799-ba6c10aace85?w=120&q=70' },
-    { name: 'Paula V.', city: 'Barcelona', product: 'Contorno Caffeine Boost', time: 'hace 8 h', img: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=120&q=70' },
+    { name: 'Paula V.', city: 'Barcelona', product: 'Contorno Caffeine Boost', time: 'hace 8 h', img: 'https://images.unsplash.com/photo-1617897903246-719242758050?w=120&q=70' },
     { name: 'Carmen L.', city: 'Zaragoza', product: 'Mascarilla Clay Detox', time: 'hace 1 h', img: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=120&q=70' },
     { name: 'Isabel F.', city: 'Málaga', product: 'Crema Aloe Shield', time: 'hace 4 h', img: 'https://images.unsplash.com/photo-1699885725100-18bfef4955d6?w=120&q=70' },
   ];
@@ -334,19 +334,74 @@ function initQuickAdd() {
   });
 }
 
-// ---- CATALOG: filter ----
+// ---- CATALOG: filter + sort ----
 function initFilter() {
-  const links = document.querySelectorAll('.filter-group ul li a[data-filter], .filter-pill[data-filter]');
-  links.forEach(link => {
+  const grid = document.querySelector('.product-grid');
+  const countEl = document.querySelector('.catalog-result-count');
+  const pills = document.querySelectorAll('.filter-pill[data-filter]');
+  const sortSel = document.querySelector('.catalog-sort');
+
+  const originalOrder = grid ? [...grid.querySelectorAll('.product-card')] : [];
+  let activeCat = 'all';
+  let activeSort = 0;
+
+  function getPrice(card) {
+    return parseFloat(card.querySelector('.btn-quick-add')?.dataset?.price || '0');
+  }
+  function isNew(card) {
+    return !!card.querySelector('.product-card__badge--new');
+  }
+
+  function applyFilterSort() {
+    if (!grid) return;
+
+    const visible = activeCat === 'all'
+      ? [...originalOrder]
+      : originalOrder.filter(c => c.dataset.cat === activeCat);
+
+    let sorted = [...visible];
+    if (activeSort === 1) sorted.sort((a, b) => getPrice(a) - getPrice(b));
+    else if (activeSort === 2) sorted.sort((a, b) => getPrice(b) - getPrice(a));
+    else if (activeSort === 3) sorted.sort((a, b) => (isNew(b) ? 1 : 0) - (isNew(a) ? 1 : 0));
+
+    sorted.forEach(card => { card.style.display = ''; grid.appendChild(card); });
+    originalOrder.filter(c => !visible.includes(c)).forEach(card => {
+      card.style.display = 'none';
+      grid.appendChild(card);
+    });
+
+    if (countEl) {
+      countEl.textContent = `${sorted.length} ${sorted.length === 1 ? 'producto' : 'productos'}`;
+    }
+  }
+
+  pills.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const container = link.closest('.filter-group') || link.closest('.filter-pills');
+      pills.forEach(p => p.classList.remove('active'));
+      link.classList.add('active');
+      activeCat = link.dataset.filter;
+      applyFilterSort();
+    });
+  });
+
+  if (sortSel) {
+    sortSel.addEventListener('change', () => {
+      activeSort = sortSel.selectedIndex;
+      applyFilterSort();
+    });
+  }
+
+  // Legacy: filter-group links on other pages
+  document.querySelectorAll('.filter-group ul li a[data-filter]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const container = link.closest('.filter-group');
       if (container) container.querySelectorAll('[data-filter]').forEach(a => a.classList.remove('active'));
       link.classList.add('active');
       const cat = link.dataset.filter;
       document.querySelectorAll('.product-card').forEach(card => {
-        const show = !cat || cat === 'all' || card.dataset.cat === cat;
-        card.style.display = show ? '' : 'none';
+        card.style.display = (!cat || cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
       });
     });
   });
