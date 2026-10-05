@@ -352,7 +352,7 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
   box-shadow: 0 4px 20px rgba(28,28,26,.07);
 }
 .filter-pills { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.filter-pills__label { font-size: 0.67rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); margin-right: 8px; }
+.filter-pills__label { font-size: 0.74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); margin-right: 8px; }
 .filter-pill {
   display: inline-flex; align-items: center; gap: 7px;
   font-size: 0.82rem; padding: 10px 20px; font-weight: 500;
@@ -361,7 +361,7 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
   transition: all .22s var(--ease); white-space: nowrap; cursor: pointer; text-decoration: none;
 }
 .filter-pill em {
-  font-style: normal; font-size: 0.67rem; font-weight: 600;
+  font-style: normal; font-size: 0.74rem; font-weight: 600;
   background: var(--ivory-2); color: var(--ink-2);
   border-radius: 100px; padding: 1px 7px; line-height: 1.55;
   transition: background .22s var(--ease), color .22s var(--ease);
