@@ -657,4 +657,32 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
   .catalog-header { flex-direction: column; align-items: flex-start; gap: 12px; }
   .cart-item { grid-template-columns: 80px 1fr; }
   .cart-item__price { grid-column: 1 / -1; text-align: left; }
+  .sticky-cart__img { display: none; }
+  .sticky-cart__name { font-size: .82rem; }
 }
+
+/* ============================================================
+   STICKY ADD-TO-CART (product page)
+   ============================================================ */
+.sticky-cart {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: var(--ivory); border-top: 1px solid var(--line);
+  box-shadow: 0 -6px 32px rgba(28,28,26,.10);
+  padding: 12px 0;
+  transform: translateY(100%);
+  transition: transform .32s var(--ease);
+}
+.sticky-cart.is-visible { transform: translateY(0); }
+.sticky-cart__inner { display: flex; align-items: center; gap: 16px; }
+.sticky-cart__img { width: 44px; height: 54px; object-fit: cover; border-radius: 6px; flex-shrink: 0; }
+.sticky-cart__info { flex: 1; min-width: 0; }
+.sticky-cart__name { font-family: var(--serif); font-size: .9rem; color: var(--charcoal); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sticky-cart__price { font-size: .8rem; color: var(--ink-2); margin-top: 2px; }
+
+/* ============================================================
+   WISHLIST SAVED STATE (catalog)
+   ============================================================ */
+.product-card__wish.is-saved { opacity: 1; transform: scale(1); }
+.product-card__wish.is-saved svg { stroke: #c0392b; fill: #c0392b; }
+@keyframes heart-pop { 0%,100% { transform: scale(1); } 45% { transform: scale(1.4); } }
+.product-card__wish.is-popping { animation: heart-pop .32s var(--ease); }
