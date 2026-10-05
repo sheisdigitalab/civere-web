@@ -267,7 +267,7 @@ function renderCart() {
   const barDiff = document.querySelector('.shipping-bar__diff');
   if (barFill) {
     const pct = Math.min(100, (subtotal / FREE_THRESHOLD) * 100);
-    barFill.style.width = pct + '%';
+    barFill.style.transform = 'scaleX(' + (pct / 100) + ')';
     if (subtotal >= FREE_THRESHOLD) {
       if (barMsg) barMsg.hidden = true;
       if (barOk)  barOk.hidden  = false;
