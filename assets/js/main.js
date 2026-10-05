@@ -253,6 +253,70 @@ function initWishlist() {
   });
 }
 
+// ---- SOCIAL PROOF BUBBLE ----
+function initSocialProof() {
+  const events = [
+    { name: 'Ana M.', city: 'Madrid', product: 'Sérum Rosehip Glow', time: 'hace 2 h', img: 'https://images.unsplash.com/photo-1613803745799-ba6c10aace85?w=120&q=70' },
+    { name: 'Lucía R.', city: 'Valencia', product: 'Crema Aloe Shield', time: 'hace 3 h', img: 'https://images.unsplash.com/photo-1699885725100-18bfef4955d6?w=120&q=70' },
+    { name: 'Marta G.', city: 'Sevilla', product: 'Aceite Argan Ritual', time: 'hace 5 h', img: 'https://images.unsplash.com/photo-1672062519474-1a4407fdf387?w=120&q=70' },
+    { name: 'Sara T.', city: 'Bilbao', product: 'Sérum Rosehip Glow', time: 'hace 6 h', img: 'https://images.unsplash.com/photo-1613803745799-ba6c10aace85?w=120&q=70' },
+    { name: 'Paula V.', city: 'Barcelona', product: 'Contorno Caffeine Boost', time: 'hace 8 h', img: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=120&q=70' },
+    { name: 'Carmen L.', city: 'Zaragoza', product: 'Mascarilla Clay Detox', time: 'hace 1 h', img: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=120&q=70' },
+    { name: 'Isabel F.', city: 'Málaga', product: 'Crema Aloe Shield', time: 'hace 4 h', img: 'https://images.unsplash.com/photo-1699885725100-18bfef4955d6?w=120&q=70' },
+  ];
+
+  const bubble = document.createElement('div');
+  bubble.className = 'sp-bubble';
+  bubble.setAttribute('role', 'status');
+  bubble.setAttribute('aria-live', 'polite');
+  bubble.innerHTML = `
+    <img class="sp-bubble__img" src="" alt="" aria-hidden="true" loading="lazy">
+    <div class="sp-bubble__body">
+      <p class="sp-bubble__name"></p>
+      <p class="sp-bubble__msg"></p>
+      <p class="sp-bubble__time"></p>
+    </div>
+    <button class="sp-bubble__close" aria-label="Cerrar notificación">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>`;
+  document.body.appendChild(bubble);
+
+  const img  = bubble.querySelector('.sp-bubble__img');
+  const name = bubble.querySelector('.sp-bubble__name');
+  const msg  = bubble.querySelector('.sp-bubble__msg');
+  const time = bubble.querySelector('.sp-bubble__time');
+  const closeBtn = bubble.querySelector('.sp-bubble__close');
+
+  let hideTimer, nextTimer;
+  let idx = Math.floor(Math.random() * events.length);
+
+  function hideBubble() {
+    bubble.classList.remove('is-visible');
+  }
+
+  function showNext() {
+    const ev = events[idx % events.length];
+    idx++;
+    img.src  = ev.img;
+    name.textContent = `${ev.name} · ${ev.city}`;
+    msg.textContent  = `acaba de comprar ${ev.product}`;
+    time.textContent = ev.time;
+
+    bubble.classList.add('is-visible');
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(hideBubble, 5000);
+    nextTimer = setTimeout(showNext, 18000 + Math.random() * 7000);
+  }
+
+  closeBtn.addEventListener('click', () => {
+    clearTimeout(hideTimer);
+    hideBubble();
+  });
+
+  // First show after 8s, then every ~18-25s
+  nextTimer = setTimeout(showNext, 8000);
+}
+
 // ---- CATALOG: quick-add ----
 function initQuickAdd() {
   document.querySelectorAll('.btn-quick-add').forEach(btn => {
@@ -398,6 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNav();
   updateCartBadge();
   initNewsletterPopup();
+  initSocialProof();
   initAccordion();
   initGallery();
   initProductPage();
