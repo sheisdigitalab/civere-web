@@ -361,8 +361,9 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
 .accordion-btn:hover { color: var(--sage); }
 .accordion-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .3s; flex-shrink: 0; }
 .accordion-btn.is-open svg { transform: rotate(180deg); }
-.accordion-body { overflow: hidden; max-height: 0; transition: max-height .35s var(--ease); }
-.accordion-body-inner { padding: 0 0 20px; font-size: 0.88rem; color: var(--ink-2); line-height: 1.8; }
+.accordion-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s var(--ease); }
+.accordion-body.is-open { grid-template-rows: 1fr; }
+.accordion-body-inner { overflow: hidden; min-height: 0; padding: 0 0 20px; font-size: 0.88rem; color: var(--ink-2); line-height: 1.8; }
 
 /* ============================================================
    CART PAGE

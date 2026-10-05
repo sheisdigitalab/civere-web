@@ -104,14 +104,13 @@ function initAccordion() {
     btn.addEventListener('click', () => {
       const body = btn.nextElementSibling;
       const isOpen = btn.classList.contains('is-open');
-      // Close all
       document.querySelectorAll('.accordion-btn').forEach(b => {
         b.classList.remove('is-open');
-        b.nextElementSibling.style.maxHeight = '0';
+        b.nextElementSibling.classList.remove('is-open');
       });
       if (!isOpen) {
         btn.classList.add('is-open');
-        body.style.maxHeight = body.scrollHeight + 'px';
+        body.classList.add('is-open');
       }
     });
   });
