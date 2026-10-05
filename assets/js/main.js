@@ -253,11 +253,35 @@ function renderCart() {
   const shipEl    = document.querySelector('.summary-shipping-cost');
   const totalEl   = document.querySelector('.summary-total');
   const freeEl    = document.querySelector('.summary-free-banner');
-  if (subEl)   subEl.textContent   = subtotal.toFixed(2) + ' €';
-  if (shipEl)  shipEl.textContent  = shipping === 0 ? 'Gratis' : shipping.toFixed(2) + ' €';
-  if (totalEl) totalEl.textContent = total.toFixed(2) + ' €';
+  if (subEl)   subEl.textContent   = subtotal.toFixed(2).replace('.', ',') + ' €';
+  if (shipEl)  shipEl.textContent  = shipping === 0 ? 'Gratis' : shipping.toFixed(2).replace('.', ',') + ' €';
+  if (totalEl) totalEl.textContent = total.toFixed(2).replace('.', ',') + ' €';
   if (freeEl)  freeEl.style.display = shipping === 0 ? '' : 'none';
   document.querySelectorAll('.cart-count-text').forEach(el => el.textContent = cartCount() + ' producto' + (cartCount() !== 1 ? 's' : ''));
+
+  // Shipping progress bar
+  const FREE_THRESHOLD = 50;
+  const barFill = document.querySelector('.shipping-bar__fill');
+  const barMsg  = document.querySelector('.shipping-bar__msg');
+  const barOk   = document.querySelector('.shipping-bar__ok');
+  const barDiff = document.querySelector('.shipping-bar__diff');
+  if (barFill) {
+    const pct = Math.min(100, (subtotal / FREE_THRESHOLD) * 100);
+    barFill.style.width = pct + '%';
+    if (subtotal >= FREE_THRESHOLD) {
+      if (barMsg) barMsg.hidden = true;
+      if (barOk)  barOk.hidden  = false;
+    } else {
+      const diff = (FREE_THRESHOLD - subtotal).toFixed(2).replace('.', ',');
+      if (barDiff) barDiff.textContent = diff + ' €';
+      if (barMsg)  barMsg.hidden = false;
+      if (barOk)   barOk.hidden  = true;
+    }
+  }
+
+  // Upsell — show when cart has items
+  const upsell = document.querySelector('.cart-upsell');
+  if (upsell) upsell.hidden = cart.length === 0;
 }
 
 // ---- CHECKOUT MODAL ----

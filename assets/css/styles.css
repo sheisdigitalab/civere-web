@@ -219,7 +219,7 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
   position: absolute; top: 12px; left: 12px;
   background: var(--sage); color: #fff;
   font-size: 0.7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  padding: 6px 12px; border-radius: 2px;
+  padding: 8px 12px; border-radius: 2px;
 }
 .product-card__badge--new { background: var(--charcoal); }
 .product-card__actions {
@@ -470,6 +470,38 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
 .summary-row--total { font-weight: 700; font-size: 1rem; padding-top: 16px; border-top: 1px solid var(--line); }
 .summary-shipping { background: rgba(74,107,93,.1); border-radius: var(--r-sm); padding: 10px 14px; font-size: 0.8rem; color: var(--sage); font-weight: 500; display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
 .summary-shipping svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+/* Shipping progress bar */
+.shipping-bar { background: var(--ivory); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin-bottom: 22px; }
+.shipping-bar__text { font-size: 0.82rem; color: var(--ink-2); margin-bottom: 10px; line-height: 1.4; }
+.shipping-bar__text strong { color: var(--charcoal); }
+.shipping-bar__ok { color: var(--sage); font-weight: 600; }
+.shipping-bar__track { height: 5px; background: var(--line); border-radius: 100px; overflow: hidden; }
+.shipping-bar__fill { height: 100%; background: var(--sage); border-radius: 100px; transition: width .5s cubic-bezier(.25,.8,.25,1); width: 0%; }
+/* Cart upsell */
+.cart-upsell { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line); }
+.cart-upsell__title { font-size: 0.75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 14px; }
+.cart-upsell__list { display: flex; flex-direction: column; gap: 10px; }
+.cart-upsell__item { display: flex; align-items: center; gap: 14px; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--ivory); transition: border-color .2s; }
+.cart-upsell__item:hover { border-color: var(--sage); }
+.cart-upsell__img { width: 52px; height: 52px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+.cart-upsell__info { flex: 1; min-width: 0; }
+.cart-upsell__name { font-size: 0.84rem; font-weight: 500; color: var(--charcoal); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cart-upsell__price { font-size: 0.78rem; color: var(--ink-2); margin-top: 2px; }
+.cart-upsell__add { flex-shrink: 0; font-size: 0.78rem !important; padding: 7px 14px !important; }
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.testimonials-section { background: var(--linen, #f0ebe3); }
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.testimonial { margin: 0; background: var(--ivory); border: 1px solid var(--line); border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 16px; }
+.testimonial__stars { font-size: 0.95rem; color: var(--sage); letter-spacing: 2px; }
+.testimonial__text { font-family: var(--serif); font-size: 1rem; line-height: 1.75; color: var(--charcoal); flex: 1; }
+.testimonial__author { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+.testimonial__avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--sage); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.05rem; flex-shrink: 0; }
+.testimonial__name { font-size: 0.88rem; font-weight: 600; color: var(--charcoal); }
+.testimonial__meta { font-size: 0.75rem; color: var(--ink-2); margin-top: 1px; }
+.testimonial__tag { margin-left: auto; font-size: 0.68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--sage); padding: 5px 11px; border: 1px solid var(--sage); border-radius: 100px; white-space: nowrap; flex-shrink: 0; }
 
 /* ============================================================
    ABOUT PAGE

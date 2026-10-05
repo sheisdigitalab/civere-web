@@ -45,11 +45,53 @@
         </div>
         <!-- Items generados por JS -->
         <div class="cart-items"></div>
+
+        <!-- Upsell -->
+        <div class="cart-upsell" hidden>
+          <p class="cart-upsell__title">Añade algo más a tu rutina</p>
+          <div class="cart-upsell__list">
+            <div class="cart-upsell__item">
+              <img class="cart-upsell__img" src="https://images.unsplash.com/photo-1599305090598-fe179d501227?w=120&q=80" alt="Bálsamo Honey Lip" loading="lazy">
+              <div class="cart-upsell__info">
+                <p class="cart-upsell__name">Bálsamo Labial Honey Lip</p>
+                <p class="cart-upsell__price">18,00 €</p>
+              </div>
+              <button class="btn btn--ghost cart-upsell__add btn-quick-add"
+                data-id="p8" data-name="Bálsamo Honey Lip" data-price="18" data-cat="Tratamiento"
+                data-img="https://images.unsplash.com/photo-1599305090598-fe179d501227?w=600&q=80">
+                + Añadir
+              </button>
+            </div>
+            <div class="cart-upsell__item">
+              <img class="cart-upsell__img" src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=120&q=80" alt="Tónico Rose Water Mist" loading="lazy">
+              <div class="cart-upsell__info">
+                <p class="cart-upsell__name">Tónico Rose Water Mist</p>
+                <p class="cart-upsell__price">32,00 €</p>
+              </div>
+              <button class="btn btn--ghost cart-upsell__add btn-quick-add"
+                data-id="p6" data-name="Tónico Rose Water Mist" data-price="32" data-cat="Facial"
+                data-img="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80">
+                + Añadir
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- SUMMARY -->
       <div class="cart-summary" style="display:none">
         <h3>Resumen del pedido</h3>
+
+        <!-- Shipping progress bar -->
+        <div class="shipping-bar">
+          <div class="shipping-bar__text">
+            <span class="shipping-bar__msg">Añade <strong><span class="shipping-bar__diff">–</span></strong> más para <strong>envío gratis</strong></span>
+            <span class="shipping-bar__ok" hidden>¡Envío gratis desbloqueado!</span>
+          </div>
+          <div class="shipping-bar__track">
+            <div class="shipping-bar__fill"></div>
+          </div>
+        </div>
 
         <div class="summary-shipping" style="display:none">
           <svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 0 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="1"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
