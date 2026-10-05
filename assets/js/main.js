@@ -270,7 +270,7 @@ function initSocialProof() {
   bubble.setAttribute('role', 'status');
   bubble.setAttribute('aria-live', 'polite');
   bubble.innerHTML = `
-    <img class="sp-bubble__img" src="" alt="" aria-hidden="true" loading="lazy">
+    <img class="sp-bubble__img" src="https://images.unsplash.com/photo-1613803745799-ba6c10aace85?w=120&q=70" alt="" aria-hidden="true" loading="lazy">
     <div class="sp-bubble__body">
       <p class="sp-bubble__name"></p>
       <p class="sp-bubble__msg"></p>
