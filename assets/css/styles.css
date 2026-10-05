@@ -668,12 +668,12 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
   background: var(--ivory); border-top: 1px solid var(--line);
   box-shadow: 0 -6px 32px rgba(28,28,26,.10);
-  padding: 12px 0;
+  padding: 12px 24px;
   transform: translateY(100%);
   transition: transform .32s var(--ease);
 }
 .sticky-cart.is-visible { transform: translateY(0); }
-.sticky-cart__inner { display: flex; align-items: center; gap: 16px; }
+.sticky-cart__inner { display: flex; align-items: center; gap: 16px; max-width: 1152px; margin: 0 auto; }
 .sticky-cart__img { width: 44px; height: 54px; object-fit: cover; border-radius: 6px; flex-shrink: 0; }
 .sticky-cart__info { flex: 1; min-width: 0; }
 .sticky-cart__name { font-family: var(--serif); font-size: .9rem; color: var(--charcoal); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
