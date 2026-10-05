@@ -162,6 +162,42 @@ function initProductPage() {
   });
 }
 
+// ---- NEWSLETTER POPUP ----
+function initNewsletterPopup() {
+  const popup = document.getElementById('nlPopup');
+  if (!popup) return;
+  const KEY = 'civere_nl';
+  try { if (localStorage.getItem(KEY)) return; } catch {}
+
+  function show() {
+    popup.classList.add('is-open');
+    requestAnimationFrame(() => requestAnimationFrame(() => popup.classList.add('is-visible')));
+  }
+  function dismiss() {
+    popup.classList.remove('is-visible');
+    setTimeout(() => popup.classList.remove('is-open'), 360);
+    try { localStorage.setItem(KEY, '1'); } catch {}
+  }
+
+  setTimeout(show, 4000);
+
+  popup.querySelector('.nl-close')?.addEventListener('click', dismiss);
+  popup.addEventListener('click', e => { if (e.target === popup) dismiss(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && popup.classList.contains('is-open')) dismiss(); });
+
+  document.getElementById('nlForm')?.addEventListener('submit', e => {
+    e.preventDefault();
+    const body = popup.querySelector('.nl-body');
+    if (body) body.innerHTML = `
+      <p class="nl-label">Listo</p>
+      <h2 class="nl-title" style="font-size:1.5rem">¡Código enviado!</h2>
+      <p class="nl-desc">Revisa tu email. Tu código de bienvenida es <strong style="color:var(--charcoal)">BIENVENIDA10</strong>.</p>
+      <p class="nl-fine">Puedes cerrar esta ventana cuando quieras.</p>`;
+    try { localStorage.setItem(KEY, '1'); } catch {}
+    setTimeout(dismiss, 3500);
+  });
+}
+
 // ---- STICKY ADD-TO-CART ----
 function initStickyCart() {
   const mainActions = document.querySelector('.product-actions');
@@ -361,6 +397,7 @@ function initCheckout() {
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   updateCartBadge();
+  initNewsletterPopup();
   initAccordion();
   initGallery();
   initProductPage();

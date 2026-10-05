@@ -392,6 +392,28 @@
   </div>
 </footer>
 
+<!-- NEWSLETTER POPUP -->
+<div class="nl-overlay" id="nlPopup" role="dialog" aria-modal="true" aria-labelledby="nlTitle">
+  <div class="nl-modal">
+    <button class="nl-close" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="nl-visual" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&q=80" alt="" loading="lazy">
+    </div>
+    <div class="nl-body">
+      <p class="nl-label">Bienvenida</p>
+      <h2 class="nl-title" id="nlTitle">Un regalo<br>para tu piel</h2>
+      <p class="nl-desc">Suscríbete y recibe un <strong>10% de descuento</strong> en tu primer pedido, más rituales y novedades exclusivas.</p>
+      <form class="nl-form" id="nlForm" novalidate>
+        <input class="nl-input" type="email" placeholder="tu@email.com" aria-label="Correo electrónico" autocomplete="email" required>
+        <button class="btn btn--sage btn--full" type="submit">Quiero mi descuento</button>
+      </form>
+      <p class="nl-fine">Sin spam. Cancela cuando quieras.</p>
+    </div>
+  </div>
+</div>
+
 <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 <script src="assets/js/main.js"></script>
 </body>
