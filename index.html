@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civère — Cosmética Natural de Autor · Barcelona</title>
+  <meta name="description" content="Civère, cosmética natural artesanal desde Barcelona. Fórmulas limpias, ingredientes de origen vegetal, resultados reales.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">Civ<span>è</span>re</a>
+    <div class="nav__links">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Tienda</a>
+      <a href="nosotros.html">Nosotras</a>
+    </div>
+    <div class="nav__right">
+      <a href="carrito.html" class="nav__cart" aria-label="Carrito">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count is-hidden">0</span>
+      </a>
+      <button class="nav__ham" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__content">
+    <p class="t-sub hero__eyebrow">Barcelona · Desde 2019</p>
+    <h1 class="t-display hero__title">La piel que<br><em>siempre quisiste</em></h1>
+    <p class="hero__copy">Fórmulas limpias elaboradas con ingredientes vegetales de proximidad. Sin parabenos, sin sulfatos, sin compromisos con tu piel.</p>
+    <div class="hero__ctas">
+      <a href="catalogo.html" class="btn btn--sage">Explorar la tienda</a>
+      <a href="nosotros.html" class="btn btn--outline">Nuestra historia</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BESTSELLERS ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="t-sub">Más vendidos</p>
+      <h2 class="t-heading">Los favoritos de nuestra comunidad</h2>
+      <p>Productos desarrollados con dermatólogos y amados por miles de pieles.</p>
+    </div>
+    <div class="product-grid">
+
+      <!-- P1 -->
+      <article class="product-card" data-cat="facial">
+        <div class="product-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80" alt="Sérum Rosehip Glow" loading="lazy">
+          <span class="product-card__badge">Best-seller</span>
+          <div class="product-card__actions">
+            <button class="btn btn--sage btn--full btn-quick-add"
+              data-id="p1" data-name="Sérum Rosehip Glow" data-price="68" data-cat="Facial"
+              data-img="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+        <div class="product-card__body">
+          <p class="product-card__cat">Facial</p>
+          <h3 class="product-card__name"><a href="producto.html">Sérum Rosehip Glow</a></h3>
+          <div class="product-card__price-row">
+            <span class="product-card__price">68,00 €</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- P2 -->
+      <article class="product-card" data-cat="facial">
+        <div class="product-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80" alt="Crema Aloe Shield" loading="lazy">
+          <div class="product-card__actions">
+            <button class="btn btn--sage btn--full btn-quick-add"
+              data-id="p2" data-name="Crema Aloe Shield" data-price="45" data-cat="Facial"
+              data-img="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+        <div class="product-card__body">
+          <p class="product-card__cat">Facial</p>
+          <h3 class="product-card__name"><a href="producto.html">Crema Hidratante Aloe Shield</a></h3>
+          <div class="product-card__price-row">
+            <span class="product-card__price">45,00 €</span>
+            <span class="product-card__price-old">58,00 €</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- P3 -->
+      <article class="product-card" data-cat="corporal">
+        <div class="product-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=600&q=80" alt="Aceite Argan Ritual" loading="lazy">
+          <span class="product-card__badge product-card__badge--new">Nuevo</span>
+          <div class="product-card__actions">
+            <button class="btn btn--sage btn--full btn-quick-add"
+              data-id="p3" data-name="Aceite Argan Ritual" data-price="55" data-cat="Corporal"
+              data-img="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=600&q=80">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+        <div class="product-card__body">
+          <p class="product-card__cat">Corporal</p>
+          <h3 class="product-card__name"><a href="producto.html">Aceite Corporal Argan Ritual</a></h3>
+          <div class="product-card__price-row">
+            <span class="product-card__price">55,00 €</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <div style="text-align:center;margin-top:44px;">
+      <a href="catalogo.html" class="btn btn--ghost">Ver todos los productos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PILLARS ================= -->
+<section class="section pillars">
+  <div class="container">
+    <div class="section-header">
+      <p class="t-sub">Por qué Civère</p>
+      <h2 class="t-heading">Formulado con convicción</h2>
+      <p>No seguimos tendencias. Seguimos a la ciencia y a la naturaleza.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Sin ingredientes tóxicos</h3>
+        <p>Cero parabenos, sulfatos, siliconas ni colorantes artificiales. Lista INCI 100% limpia, siempre.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Ingredientes de proximidad</h3>
+        <p>Proveedores de Cataluña y el Mediterráneo. Menos huella, más calidad y trazabilidad total.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Probado por dermatólogos</h3>
+        <p>Cada fórmula supera tests de eficacia e hipoalergenicidad antes de llegar a tus manos.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar__icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <h3>No testado en animales</h3>
+        <p>Cruelty-free certificado. Porque la ética no se negocia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <p class="t-sub">Explora</p>
+      <h2 class="t-heading">Encuentra tu rutina</h2>
+    </div>
+    <div class="cat-banner-grid">
+      <a href="catalogo.html" class="cat-banner">
+        <div class="cat-banner__bg" style="background-image:url('https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=900&q=85')"></div>
+        <div class="cat-banner__content">
+          <span class="cat-banner__label">Cuidado Facial</span>
+          <span class="cat-banner__link">Descubrir
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+      <a href="catalogo.html" class="cat-banner">
+        <div class="cat-banner__bg" style="background-image:url('https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=700&q=80')"></div>
+        <div class="cat-banner__content">
+          <span class="cat-banner__label">Cuerpo & Baño</span>
+          <span class="cat-banner__link">Descubrir
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+      <a href="catalogo.html" class="cat-banner">
+        <div class="cat-banner__bg" style="background-image:url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=700&q=80')"></div>
+        <div class="cat-banner__content">
+          <span class="cat-banner__label">Tratamientos</span>
+          <span class="cat-banner__link">Descubrir
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+<section class="newsletter">
+  <div class="container">
+    <p class="t-sub">Únete a la comunidad</p>
+    <h2 class="t-heading">Piel consciente, vida consciente</h2>
+    <p>Rituales de belleza, consejos de expertos y acceso anticipado a novedades.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('¡Suscripción confirmada!')">
+      <input type="email" placeholder="Tu correo electrónico" required>
+      <button type="submit" class="btn btn--dark">Suscribirse</button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">Civère</a>
+        <p>Cosmética natural de autor desde Barcelona. Formulada con ingredientes de proximidad, sin compromisos.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-13.46 3.29"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Tienda</h4>
+        <ul>
+          <li><a href="catalogo.html">Todos los productos</a></li>
+          <li><a href="catalogo.html">Cuidado facial</a></li>
+          <li><a href="catalogo.html">Cuerpo & baño</a></li>
+          <li><a href="catalogo.html">Tratamientos</a></li>
+          <li><a href="catalogo.html">Novedades</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>La marca</h4>
+        <ul>
+          <li><a href="nosotros.html">Nuestra historia</a></li>
+          <li><a href="nosotros.html">Valores</a></li>
+          <li><a href="nosotros.html">Ingredientes</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Prensa</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Envíos y devoluciones</a></li>
+          <li><a href="#">Guía de rutinas</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Civère. Todos los derechos reservados.</p>
+      <p>Política de privacidad · Aviso legal · Cookies</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

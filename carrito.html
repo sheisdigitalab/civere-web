@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito — Civère</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">Civ<span>è</span>re</a>
+    <div class="nav__links">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Tienda</a>
+      <a href="nosotros.html">Nosotras</a>
+    </div>
+    <div class="nav__right">
+      <a href="carrito.html" class="nav__cart" aria-label="Carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count is-hidden">0</span>
+      </a>
+      <button class="nav__ham" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="cart-page">
+  <div class="container">
+
+    <h1 class="cart-heading">
+      Tu carrito · <span class="cart-count-text">0 productos</span>
+    </h1>
+
+    <div class="cart-layout">
+
+      <!-- ITEMS -->
+      <div>
+        <!-- Estado vacío -->
+        <div class="cart-empty">
+          <p style="font-family:var(--serif);font-size:1.1rem;color:var(--charcoal);margin-bottom:8px;">Tu carrito está vacío</p>
+          <p>Todavía no has añadido ningún producto.</p>
+          <a href="catalogo.html" class="btn btn--sage" style="margin-top:24px">Explorar la tienda</a>
+        </div>
+        <!-- Items generados por JS -->
+        <div class="cart-items"></div>
+      </div>
+
+      <!-- SUMMARY -->
+      <div class="cart-summary" style="display:none">
+        <h3>Resumen del pedido</h3>
+
+        <div class="summary-shipping" style="display:none">
+          <svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 0 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="1"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+          ¡Envío gratuito aplicado!
+        </div>
+
+        <div class="summary-rows">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span class="summary-subtotal">0,00 €</span>
+          </div>
+          <div class="summary-row">
+            <span>Envío</span>
+            <span class="summary-shipping-cost">4,95 €</span>
+          </div>
+          <div class="summary-row summary-row--total">
+            <span>Total</span>
+            <span class="summary-total">0,00 €</span>
+          </div>
+        </div>
+
+        <p style="font-size:.78rem;color:var(--ink-2);margin-bottom:20px;line-height:1.6;">
+          Los impuestos incluidos. Envío gratis en pedidos ≥ 50 €.
+        </p>
+
+        <button class="btn btn--sage btn--full btn-checkout" style="margin-bottom:12px">
+          Finalizar compra
+        </button>
+        <a href="catalogo.html" class="btn btn--ghost btn--full">Seguir comprando</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CONFIRMACIÓN -->
+<div class="modal-overlay" role="dialog" aria-modal="true" aria-label="Pedido confirmado">
+  <div class="modal">
+    <div class="modal__icon">
+      <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    </div>
+    <h3>¡Pedido confirmado!</h3>
+    <p>Gracias por tu compra. En breve recibirás un correo con los detalles y el seguimiento de tu envío.</p>
+    <p style="font-size:.8rem;color:var(--sand);margin-top:-12px;margin-bottom:20px;font-style:italic;">
+      (Demo · No se ha realizado ningún cargo real)
+    </p>
+    <button class="modal__close" onclick="document.querySelector('.modal-overlay').classList.remove('is-open')">
+      Volver a la tienda
+    </button>
+  </div>
+</div>
+
+<footer class="footer" style="margin-top:80px">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">Civère</a>
+        <p>Cosmética natural de autor desde Barcelona.</p>
+      </div>
+      <div class="footer__col"><h4>Tienda</h4><ul><li><a href="catalogo.html">Todos</a></li></ul></div>
+      <div class="footer__col"><h4>Ayuda</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Envíos</a></li></ul></div>
+      <div class="footer__col"></div>
+    </div>
+    <div class="footer__bottom"><p>© 2025 Civère. Todos los derechos reservados.</p></div>
+  </div>
+</footer>
+
+<div class="toast"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

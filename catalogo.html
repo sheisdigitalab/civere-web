@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda — Civère</title>
+  <meta name="description" content="Explora toda la gama de Civère. Sérums, cremas, aceites y tratamientos de cosmética natural.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">Civ<span>è</span>re</a>
+    <div class="nav__links">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Tienda</a>
+      <a href="nosotros.html">Nosotras</a>
+    </div>
+    <div class="nav__right">
+      <a href="carrito.html" class="nav__cart" aria-label="Carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count is-hidden">0</span>
+      </a>
+      <button class="nav__ham" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="t-sub">Nuestra gama</p>
+    <h1 class="t-heading">Toda la tienda</h1>
+  </div>
+</section>
+
+<section class="section--sm">
+  <div class="container">
+    <div class="catalog-layout">
+
+      <!-- FILTERS -->
+      <aside class="filters">
+        <div class="filter-group">
+          <h3>Categoría</h3>
+          <ul>
+            <li><a href="#" data-filter="all" class="active">Todos los productos <span>8</span></a></li>
+            <li><a href="#" data-filter="facial">Facial <span>4</span></a></li>
+            <li><a href="#" data-filter="corporal">Corporal <span>2</span></a></li>
+            <li><a href="#" data-filter="tratamiento">Tratamientos <span>2</span></a></li>
+          </ul>
+        </div>
+        <div class="filter-group">
+          <h3>Precio</h3>
+          <ul>
+            <li><a href="#">Menos de 30 €</a></li>
+            <li><a href="#">30 € – 60 €</a></li>
+            <li><a href="#">Más de 60 €</a></li>
+          </ul>
+        </div>
+        <div class="filter-group">
+          <h3>Tipo de piel</h3>
+          <ul>
+            <li><a href="#">Seca</a></li>
+            <li><a href="#">Mixta</a></li>
+            <li><a href="#">Grasa</a></li>
+            <li><a href="#">Sensible</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- PRODUCTS -->
+      <div>
+        <div class="catalog-header">
+          <p class="catalog-count">8 productos</p>
+          <select class="catalog-sort">
+            <option>Más vendidos</option>
+            <option>Precio: menor a mayor</option>
+            <option>Precio: mayor a menor</option>
+            <option>Novedades</option>
+          </select>
+        </div>
+
+        <div class="product-grid">
+
+          <article class="product-card" data-cat="facial">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80" alt="Sérum Rosehip Glow" loading="lazy">
+              <span class="product-card__badge">Best-seller</span>
+              <div class="product-card__actions">
+                <button class="btn btn--sage btn--full btn-quick-add"
+                  data-id="p1" data-name="Sérum Rosehip Glow" data-price="68" data-cat="Facial"
+                  data-img="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Facial</p>
+              <h3 class="product-card__name"><a href="producto.html">Sérum Rosehip Glow</a></h3>
+              <div class="product-card__price-row"><span class="product-card__price">68,00 €</span></div>
+            </div>
+          </article>
+
+          <article class="product-card" data-cat="facial">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80" alt="Crema Aloe Shield" loading="lazy">
+              <div class="product-card__actions">
+                <button class="btn btn--sage btn--full btn-quick-add"
+                  data-id="p2" data-name="Crema Aloe Shield" data-price="45" data-cat="Facial"
+                  data-img="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Facial</p>
+              <h3 class="product-card__name"><a href="producto.html">Crema Hidratante Aloe Shield</a></h3>
+              <div class="product-card__price-row">
+                <span class="product-card__price">45,00 €</span>
+                <span class="product-card__price-old">58,00 €</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-cat="corporal">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=600&q=80" alt="Aceite Argan Ritual" loading="lazy">
+              <span class="product-card__badge product-card__badge--new">Nuevo</span>
+              <div class="product-card__actions">
+                <button class="btn btn--sage btn--full btn-quick-add"
+                  data-id="p3" data-name="Aceite Argan Ritual" data-price="55" data-cat="Corporal"
+                  data-img="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=600&q=80">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Corporal</p>
+              <h3 class="product-card__name"><a href="producto.html">Aceite Corporal Argan Ritual</a></h3>
+              <div class="product-card__price-row"><span class="product-card__price">55,00 €</span></div>
+            </div>
+          </article>
+
+          <article class="product-card" data-cat="tratamiento">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80" alt="Mascarilla Clay Detox" loading="lazy">
+              <div class="product-card__actions">
+                <button class="btn btn--sage btn--full btn-quick-add"
+                  data-id="p4" data-name="Mascarilla Clay Detox" data-price="38" data-cat="Tratamiento"
+                  data-img="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Tratamiento</p>
+              <h3 class="product-card__name"><a href="producto.html">Mascarilla Clay Detox</a></h3>
+              <div class="product-card__price-row"><span class="product-card__price">38,00 €</span></div>
+            </div>
+          </article>
+
+          <article class="product-card" data-cat="facial">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80" alt="Contorno Caffeine Boost" loading="lazy">
+              <div class="product-card__actions">
+                <button class="btn btn--sage btn--full btn-quick-add"
+                  data-id="p5" data-name="Contorno Caffeine Boost" data-price="72" data-cat="Facial"
+                  data-img="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Facial</p>
+              <h3 class="product-card__name"><a href="producto.html">Contorno de Ojos Caffeine Boost</a></h3>
+              <div class="product-card__price-row"><span class="product-card__price">72,00 €</span></div>
+            </div>
+          </article>
+
+          <article class="product-card" data-cat="facial">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80" alt="Tónico Rose Water Mist" loading="lazy">
+              <div class="product-card__actions">
+                <button class="btn btn--sage btn--full btn-quick-add"
+                  data-id="p6" data-name="Tónico Rose Water Mist" data-price="32" data-cat="Facial"
+                  data-img="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Facial</p>
+              <h3 class="product-card__name"><a href="producto.html">Tónico Rose Water Mist</a></h3>
+              <div class="product-card__price-row"><span class="product-card__price">32,00 €</span></div>
+            </div>
+          </article>
+
+          <article class="product-card" data-cat="corporal">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=600&q=80" alt="Exfoliante Sugar Bloom" loading="lazy">
+              <div class="product-card__actions">
+                <button class="btn btn--sage btn--full btn-quick-add"
+                  data-id="p7" data-name="Exfoliante Sugar Bloom" data-price="28" data-cat="Corporal"
+                  data-img="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=600&q=80">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Corporal</p>
+              <h3 class="product-card__name"><a href="producto.html">Exfoliante Sugar Bloom</a></h3>
+              <div class="product-card__price-row"><span class="product-card__price">28,00 €</span></div>
+            </div>
+          </article>
+
+          <article class="product-card" data-cat="tratamiento">
+            <div class="product-card__img-wrap">
+              <img src="https://images.unsplash.com/photo-1599305090598-fe179d501227?w=600&q=80" alt="Bálsamo Honey Lip" loading="lazy">
+              <span class="product-card__badge product-card__badge--new">Nuevo</span>
+              <div class="product-card__actions">
+                <button class="btn btn--sage btn--full btn-quick-add"
+                  data-id="p8" data-name="Bálsamo Honey Lip" data-price="18" data-cat="Tratamiento"
+                  data-img="https://images.unsplash.com/photo-1599305090598-fe179d501227?w=600&q=80">
+                  Añadir al carrito
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__cat">Tratamiento</p>
+              <h3 class="product-card__name"><a href="producto.html">Bálsamo Labial Honey Lip</a></h3>
+              <div class="product-card__price-row"><span class="product-card__price">18,00 €</span></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">Civère</a>
+        <p>Cosmética natural de autor desde Barcelona.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer__col"><h4>Tienda</h4><ul><li><a href="catalogo.html">Todos</a></li><li><a href="catalogo.html">Facial</a></li><li><a href="catalogo.html">Corporal</a></li></ul></div>
+      <div class="footer__col"><h4>La marca</h4><ul><li><a href="nosotros.html">Historia</a></li><li><a href="nosotros.html">Valores</a></li></ul></div>
+      <div class="footer__col"><h4>Ayuda</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Envíos</a></li><li><a href="#">Contacto</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2025 Civère. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

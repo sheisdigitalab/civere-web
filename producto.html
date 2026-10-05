@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sérum Rosehip Glow — Civère</title>
+  <meta name="description" content="Sérum regenerador con aceite de rosa mosqueta BIO. Ilumina, hidrata y reduce manchas en 4 semanas.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">Civ<span>è</span>re</a>
+    <div class="nav__links">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Tienda</a>
+      <a href="nosotros.html">Nosotras</a>
+    </div>
+    <div class="nav__right">
+      <a href="carrito.html" class="nav__cart" aria-label="Carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count is-hidden">0</span>
+      </a>
+      <button class="nav__ham" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="product-page">
+  <div class="container">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="index.html">Inicio</a>
+      <span>›</span>
+      <a href="catalogo.html">Tienda</a>
+      <span>›</span>
+      <span>Sérum Rosehip Glow</span>
+    </nav>
+
+    <div class="product-layout">
+
+      <!-- GALLERY -->
+      <div class="product-gallery">
+        <div class="gallery-main">
+          <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=85" alt="Sérum Rosehip Glow — vista principal" id="mainImg">
+        </div>
+        <div class="gallery-thumbs">
+          <div class="gallery-thumb active">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300&q=80" alt="Vista 1">
+          </div>
+          <div class="gallery-thumb">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=300&q=80" alt="Vista 2">
+          </div>
+          <div class="gallery-thumb">
+            <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=300&q=80" alt="Vista 3">
+          </div>
+          <div class="gallery-thumb">
+            <img src="https://images.unsplash.com/photo-1617817849527-f0a7c48b5b74?w=300&q=80" alt="Vista 4">
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="product-info">
+        <p class="t-sub">Facial · Regeneración</p>
+        <h1 class="t-heading">Sérum Rosehip Glow</h1>
+        <div class="product-stars">
+          <span class="star">★★★★★</span>
+          <span>4,9 · 128 reseñas</span>
+        </div>
+        <p class="product-price">68,00 €</p>
+        <p class="product-desc">
+          Sérum regenerador de textura seca formulado con un 15 % de aceite de rosa mosqueta BIO de Chile. Ilumina el tono, reduce la visibilidad de manchas solares y cicatrices, e hidrata en profundidad sin sensación grasa. Apto para pieles sensibles.
+        </p>
+
+        <!-- Size -->
+        <div class="product-opts">
+          <label>Tamaño</label>
+          <div style="display:flex;gap:8px;">
+            <button class="btn btn--ghost" style="padding:8px 16px;font-size:.8rem;" onclick="this.closest('.product-opts').querySelectorAll('button').forEach(b=>b.classList.remove('btn--dark'));this.classList.remove('btn--ghost');this.classList.add('btn--dark')">30 ml</button>
+            <button class="btn btn--ghost" style="padding:8px 16px;font-size:.8rem;" onclick="this.closest('.product-opts').querySelectorAll('button').forEach(b=>b.classList.remove('btn--dark'));this.classList.remove('btn--ghost');this.classList.add('btn--dark')">50 ml — +20 €</button>
+          </div>
+        </div>
+
+        <!-- Qty -->
+        <div class="qty-row">
+          <div class="qty-input">
+            <button class="qty-minus">−</button>
+            <span class="qty-val">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="product-actions">
+          <button class="btn btn--sage btn--full btn-add-cart"
+            data-id="p1" data-name="Sérum Rosehip Glow" data-price="68" data-cat="Facial"
+            data-img="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&q=80">
+            Añadir al carrito
+          </button>
+          <a href="carrito.html" class="btn btn--ghost btn--full">Ver carrito</a>
+        </div>
+
+        <!-- Meta -->
+        <div class="product-meta">
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+              Envío gratuito en pedidos superiores a 50 €
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3"/></svg>
+              Devolución gratuita en 30 días
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Cruelty-free · Vegano · Sin parabenos
+            </li>
+          </ul>
+        </div>
+
+        <!-- Accordion -->
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              Ingredientes clave
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <strong>Aceite de rosa mosqueta BIO (15%)</strong> — fuente de ácidos grasos omega-3 y omega-6, promueve la regeneración celular y reduce cicatrices.<br><br>
+                <strong>Vitamina C estabilizada (10%)</strong> — antioxidante que iguala el tono y protege contra el fotoenvejecimiento.<br><br>
+                <strong>Ácido hialurónico de bajo peso molecular</strong> — hidratación profunda de larga duración.<br><br>
+                <em>INCI completo disponible en el envase.</em>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              Modo de uso
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                Aplica 3-4 gotas sobre la piel limpia y seca, por la mañana y/o por la noche. Masajea suavemente hasta absorción completa. Usa siempre protector solar de día. Evitar el contorno de ojos.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              Preguntas frecuentes
+              <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <strong>¿Es apto para pieles sensibles?</strong> Sí. Formulado sin perfume ni colorantes. Testado por dermatólogos en pieles reactivas.<br><br>
+                <strong>¿Puedo combinarlo con Retinol?</strong> Sí, pero no en la misma aplicación. Alterna: Vitamina C de mañana, Retinol de noche.<br><br>
+                <strong>¿Cuándo veré resultados?</strong> La mayoría de usuarias reportan mejora visible en luminosidad a partir de la segunda semana.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RELATED -->
+<section class="related-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="t-sub">También te puede gustar</p>
+      <h2 class="t-heading">Completa tu rutina</h2>
+    </div>
+    <div class="product-grid">
+      <article class="product-card">
+        <div class="product-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80" alt="Crema Aloe Shield" loading="lazy">
+          <div class="product-card__actions">
+            <button class="btn btn--sage btn--full btn-quick-add"
+              data-id="p2" data-name="Crema Aloe Shield" data-price="45" data-cat="Facial"
+              data-img="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&q=80">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+        <div class="product-card__body">
+          <p class="product-card__cat">Facial</p>
+          <h3 class="product-card__name"><a href="producto.html">Crema Hidratante Aloe Shield</a></h3>
+          <div class="product-card__price-row"><span class="product-card__price">45,00 €</span></div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80" alt="Contorno Caffeine Boost" loading="lazy">
+          <div class="product-card__actions">
+            <button class="btn btn--sage btn--full btn-quick-add"
+              data-id="p5" data-name="Contorno Caffeine Boost" data-price="72" data-cat="Facial"
+              data-img="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600&q=80">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+        <div class="product-card__body">
+          <p class="product-card__cat">Facial</p>
+          <h3 class="product-card__name"><a href="producto.html">Contorno de Ojos Caffeine Boost</a></h3>
+          <div class="product-card__price-row"><span class="product-card__price">72,00 €</span></div>
+        </div>
+      </article>
+      <article class="product-card">
+        <div class="product-card__img-wrap">
+          <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80" alt="Mascarilla Clay Detox" loading="lazy">
+          <div class="product-card__actions">
+            <button class="btn btn--sage btn--full btn-quick-add"
+              data-id="p4" data-name="Mascarilla Clay Detox" data-price="38" data-cat="Tratamiento"
+              data-img="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&q=80">
+              Añadir al carrito
+            </button>
+          </div>
+        </div>
+        <div class="product-card__body">
+          <p class="product-card__cat">Tratamiento</p>
+          <h3 class="product-card__name"><a href="producto.html">Mascarilla Clay Detox</a></h3>
+          <div class="product-card__price-row"><span class="product-card__price">38,00 €</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="nav__logo">Civère</a>
+        <p>Cosmética natural de autor desde Barcelona.</p>
+      </div>
+      <div class="footer__col"><h4>Tienda</h4><ul><li><a href="catalogo.html">Todos</a></li><li><a href="catalogo.html">Facial</a></li></ul></div>
+      <div class="footer__col"><h4>La marca</h4><ul><li><a href="nosotros.html">Historia</a></li></ul></div>
+      <div class="footer__col"><h4>Ayuda</h4><ul><li><a href="#">FAQ</a></li><li><a href="#">Envíos</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><p>© 2025 Civère. Todos los derechos reservados.</p></div>
+  </div>
+</footer>
+
+<div class="toast"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
