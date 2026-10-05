@@ -291,26 +291,106 @@ button { font-family: var(--sans); cursor: pointer; border: none; background: no
 .page-hero .t-heading { margin-bottom: 0; }
 
 /* ============================================================
-   CATALOG / FILTERS
+   CATALOG HERO
    ============================================================ */
-.catalog-layout { display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: start; }
-.filters { position: sticky; top: calc(var(--nav-h) + 20px); }
-.filters h3 { font-size: 0.78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 16px; color: var(--ink-2); }
-.filter-group { margin-bottom: 28px; }
-.filter-group ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.filter-group ul li a {
-  font-size: 0.88rem; color: var(--ink-2); display: flex; align-items: center; justify-content: space-between;
-  transition: color .2s;
+.catalog-hero {
+  margin-top: var(--nav-h);
+  padding: 80px 0 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #f5f1eb 0%, var(--ivory) 55%, #ede8df 100%);
+  border-bottom: 1px solid var(--line);
 }
-.filter-group ul li a:hover, .filter-group ul li a.active { color: var(--charcoal); font-weight: 500; }
-.filter-group ul li a span { font-size: 0.75rem; color: var(--sand); }
-.catalog-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
-.catalog-count { font-size: 0.85rem; color: var(--ink-2); }
-.catalog-sort select {
-  font-family: var(--sans); font-size: 0.85rem; color: var(--charcoal);
-  border: 1px solid var(--line); border-radius: var(--r-sm);
-  padding: 8px 12px; background: transparent; cursor: pointer;
+.catalog-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, var(--line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.45;
+  pointer-events: none;
 }
+.catalog-hero .container { position: relative; z-index: 1; }
+.catalog-hero .t-sub { margin-bottom: 12px; }
+.catalog-hero .t-heading { margin-bottom: 16px; }
+.catalog-hero__desc { color: var(--ink-2); font-size: 1rem; max-width: 420px; margin: 0 auto 32px; line-height: 1.7; }
+.catalog-hero__tags { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.catalog-hero__tag {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--sage); border: 1px solid var(--sage);
+  padding: 6px 14px; border-radius: 100px;
+}
+
+/* ============================================================
+   CATALOG PROMISE STRIP
+   ============================================================ */
+.catalog-strip {
+  display: flex; align-items: center; justify-content: center;
+  gap: 40px; padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.catalog-strip__item {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink-2);
+}
+.catalog-strip__item svg {
+  width: 15px; height: 15px; stroke: var(--sage); fill: none;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0;
+}
+
+/* ============================================================
+   CATALOG FILTER BAR
+   ============================================================ */
+.filter-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; margin-bottom: 36px; padding: 28px 0 24px;
+  border-bottom: 1px solid var(--line); flex-wrap: wrap;
+}
+.filter-pills { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.filter-pills__label { font-size: 0.75rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin-right: 4px; }
+.filter-pill {
+  font-size: 0.82rem; padding: 8px 18px;
+  border: 1px solid var(--line); border-radius: 100px;
+  color: var(--ink-2); background: transparent;
+  transition: all .2s var(--ease); white-space: nowrap; cursor: pointer;
+}
+.filter-pill em { font-style: normal; font-size: 0.7rem; color: var(--ink-2); margin-left: 4px; }
+.filter-pill:hover { border-color: var(--charcoal); color: var(--charcoal); }
+.filter-pill.active { background: var(--charcoal); border-color: var(--charcoal); color: #fff; }
+.filter-pill.active em { color: rgba(255,255,255,.55); }
+.catalog-sort {
+  font-family: var(--sans); font-size: 0.82rem; color: var(--charcoal);
+  border: 1px solid var(--line); border-radius: 100px;
+  padding: 8px 16px; background: transparent; cursor: pointer; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234A4845' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center; background-size: 14px;
+  padding-right: 36px;
+}
+.catalog-result-count { font-size: 0.82rem; color: var(--ink-2); }
+
+/* legacy sidebar (hidden) */
+.catalog-layout { display: block; }
+.filters { display: none; }
+
+/* ============================================================
+   PRODUCT CARD — EXTRAS
+   ============================================================ */
+.product-card__wish {
+  position: absolute; top: 12px; right: 12px;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255,255,255,.88); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: scale(.82);
+  transition: opacity .25s var(--ease), transform .25s var(--ease);
+}
+.product-card:hover .product-card__wish { opacity: 1; transform: scale(1); }
+.product-card__wish svg { width: 15px; height: 15px; stroke: var(--charcoal); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: stroke .2s, fill .2s; }
+.product-card__wish:hover svg { stroke: #d63; fill: #d63; }
+.product-card__rating { display: flex; align-items: center; gap: 5px; margin-bottom: 5px; }
+.product-card__rating .stars { color: var(--sage); font-size: 0.7rem; letter-spacing: 1px; }
+.product-card__rating .score { font-size: 0.72rem; color: var(--ink-2); }
 
 /* ============================================================
    PRODUCT PAGE

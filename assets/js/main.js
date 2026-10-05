@@ -179,11 +179,12 @@ function initQuickAdd() {
 
 // ---- CATALOG: filter ----
 function initFilter() {
-  document.querySelectorAll('.filter-group ul li a').forEach(link => {
+  const links = document.querySelectorAll('.filter-group ul li a[data-filter], .filter-pill[data-filter]');
+  links.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const parent = link.closest('.filter-group');
-      parent.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+      const container = link.closest('.filter-group') || link.closest('.filter-pills');
+      if (container) container.querySelectorAll('[data-filter]').forEach(a => a.classList.remove('active'));
       link.classList.add('active');
       const cat = link.dataset.filter;
       document.querySelectorAll('.product-card').forEach(card => {
